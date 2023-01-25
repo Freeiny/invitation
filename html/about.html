@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>OIKONOMOS</title>
+    <link href="../css/style.css" rel="stylesheet" />
+    
+  </head>
+  <body>
+
+    <div class="ly-page ">
+
+        <div class="wrap-mainTit type-sub">
+          <h1 class="txt-mainTit hide">
+            <a href="../html/02.html">OIKONOMOS</a>
+          </h1>
+        </div>
+
+        <div class="wrap-gallery type-about">
+
+          <!--about -->
+          <div class="list-about">
+            <b class="txt-title">About us</b>
+            <b>-</b>
+            <span class="txt-ko">
+              오이코노모스 스튜디오는 청지기적 마인드를 품고 살아가는 사람들의 집합체를 칭합니다<br>
+              우리는 주어진 것들에 감사함으로 가치를 발견하고 새로운 서사를 창조해가고자 합니다<br>
+              보여지는 것 이면의 중심을 중요시합니다, 그것을 다르고 구별되게 다듬고 만듭니다.<br>
+            </span>
+            <span class="type-padding">
+              The OIKONOMOS studio refers to a collection of people who live with a spirit of a steward<br>
+              We want to discover value and create a new narrative by appreciating what is given<br>
+              We values the center behind what's being shown, and we trimmed and made differently.<br>
+
+            </span>
+
+            <b class="txt-title">What we do</b>
+            <b>-</b>
+            <span>Architectural Design</span>
+            <span>Interior Design, Planning</span>
+            <span>Space branding Strategy</span>
+            <span>Furniture Design</span>     
+
+
+          </div>
+
+        </div>
+
+        <div class="wrap-nav">
+          <h2>
+            <a class="link-mbsub" href="../index.html">
+              OIKONOMOS<br/>
+              STUDIO
+            </a>
+            <a class="mb-logo active" href="../html/02.html">
+              <span class="txt-01">O</span>
+              <span class="txt-02">I</span>
+              <span class="txt-03">K</span>
+              <span class="txt-04">O</span>
+              <span class="txt-05">N</span>
+              <span class="txt-06">O</span>
+              <span class="txt-07">M</span>
+              <span class="txt-08">O</span>
+              <span class="txt-09">S</span>
+            </a>
+          </h2>
+          <ul class="hide">
+            <li>
+              <a href="../html/project.html">Projects</a>
+            </li>
+            <li class="page-about active">
+              <a href="../html/about.html">About</a>
+            </li>
+            <li>
+              <a href="../html/contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+    </div>
+
+
+    <script>
+
+      const aboutPage = document.querySelector('.list-about');
+      const aboutLink = document.querySelector('.page-about')
+
+      if(aboutLink.classList.contains('active')){
+        aboutPage.classList.add('active')
+      }else{
+        aboutPage.classList.remove('active')
+      }
+
+
+    </script>
+
+
+
+  </body>
+
+
+</html>
