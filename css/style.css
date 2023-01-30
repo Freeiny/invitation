@@ -72,9 +72,14 @@ body, html {background-color:#efe3c6; font-family: 'Nanum Myeongjo', serif;}
 .txt-mainTit a {font-size:40px; letter-spacing:5px; font-weight:normal;}
 
 .ly-contents {display:flex; width:100%; height:100vh; flex-direction:column; text-align:center; justify-content: center;}
+.ly-contents.type-main b,
+.ly-contents.type-main b em {font-size:30px; font-weight:lighter;}
+.ly-contents.type-main p {padding:10px 0; font-size:28px;}
+.ly-contents.type-main span {font-size:26px; color:#333;}
+
 .ly-contents.type-detail {padding:0 40px; box-sizing:border-box; align-items: center}
 
-b.txt-greet {width:30%; line-height:30px;}
+b.txt-greet {max-width:500px; line-height:30px; font-weight:lighter;}
 
 
 
