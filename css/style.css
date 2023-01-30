@@ -14,7 +14,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 14px;
+	font-size: 16px;
 	/* font: inherit; */
 	vertical-align: baseline;
 }
@@ -69,7 +69,7 @@ body, html {background-color:#efe3c6; font-family: 'Nanum Myeongjo', serif;}
 .ly-all {display: flex; box-sizing:border-box; flex-direction:column;}
 .ly-page01 {position:absolute; top:0; left:0; right:0; bottom:0; opacity:0; display:flex; width:100%; padding:0 20px; height:100vh; animation: fadeout 3s linear;
   background-color:#efe3c6; justify-content: center; box-sizing:border-box; align-items:center; z-index:999;}
-.txt-mainTit a {font-size:40px; letter-spacing:5px; font-weight:normal; animation: fadein linear 2s;}
+.txt-mainTit a {font-size:40px; letter-spacing:5px; font-weight:normal;}
 
 .ly-contents {display:flex; width:100%; height:100vh; flex-direction:column; text-align:center; justify-content: center;}
 .ly-contents.type-detail {padding:0 40px; box-sizing:border-box; align-items: center}
@@ -87,12 +87,6 @@ b.txt-greet {width:30%; line-height:30px;}
   
 }
 
-
-@keyframes fadein {
-  0% {opacity:0;}
-  100% {opacity: 1;}
-  
-}
 
 /* 스크롤바 설정*/
 
