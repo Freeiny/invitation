@@ -126,9 +126,16 @@ color: rgba(0,0,0,0);}
 
 .ly-contents.type-location > p {margin:5px 0; font-size:16px;}
 
+.wrap-btn {display:flex; margin:20px 0;}
+.btn-map {display:inline-block; width:50%; height:30px; line-height:30px;; color:#fff;}
+
 
 /* photo silder */
-.slick-list {max-width:500px; height:500px; border:1px solid #ccc;}
+.list-photo {position:relative;}
+.slick-list {max-width:90%; margin:0 auto !important; height:400px; border:1px solid #ccc;}
+.list-photo  .slick-arrow {position:absolute; bottom:-20px;}
+.list-photo .slick-prev {right:40px;}
+.list-photo .slick-next {right:0;}
 
 /* 스크롤바 설정*/
 
