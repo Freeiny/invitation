@@ -61,17 +61,18 @@ body, html {background-color:#56dfcc; font-family: 'Noto Serif KR', sans-serif;
   align-items: center; flex-direction:column; z-index:999;}
 
 .ly-contents {padding:0 10px;}
-.ly-contents > strong {margin-bottom:20px; line-height:26px; font-size: 20px;}
+.ly-contents > strong,
+.ly-contents > strong > span {margin-bottom:20px; line-height:26px; font-size: 20px;}
 
-.ly-contents.type-fixed {position:sticky; z-index:999; top:0; bottom:0; left:0; right:0; background-color:#56dfcc;
-animation:fade-out 2s linear forwards;}
+.ly-contents.type-fixed {position:absolute; z-index:999; top:0; bottom:0; left:0; right:0; background-color:#56dfcc;
+animation:fade-out 2.4s linear forwards;}
 
 @keyframes fade-out {
   0% {opacity:1; top:0;}
   40% {opacity:1;}
-  70% {opacity:0.4;}
-  80% {opacity:0.2; top:-100px; position:relative; visibility: hidden;}
-  100% {opacity:0;  top:-160px;  display:none;}
+  60% {opacity:0.4; top:-50px;}
+  80% {opacity:0.2; top:-80px; position:relative; visibility: hidden;}
+  100% {opacity:0;  top:-100px; display:none;}
 }
 
 @keyframes fade-in {
@@ -92,7 +93,12 @@ animation:fade-out 2s linear forwards;}
 .ly-contents.type-userinfo .btn-userinfo {width:120px; height:40px; margin:30px auto;
 border-radius:30px; line-height:40px; border:1px solid #ccc; background:none; color:#fff;}
 
-.wrap-input input {width:100px; height:30px; background:none; border:none; border-bottom:2px solid #fff; }
+.wrap-input {position:relative; width:120px; margin:10px auto; padding:0 0 10px 100px; box-sizing:border-box; border-bottom:2px solid #fff;}
+.wrap-input input {position:absolute; top:0; right:20px; width:100px; height:36px; z-index:9; background:none; border:none; box-sizing:border-box;
+color: rgba(0,0,0,0);}
+.wrap-input input:focus-visible {outline:none; border:1px solid gold;}
+.wrap-input b {position:absolute; top:0; right:20px; width:100px; height:36px; line-height: 25px;
+  font-size: 22px; z-index:1;}
 
 .ly-contents.type-main {position:relative; opacity:0; animation: fade-in 4s forwards linear;}
 .ly-contents.type-main p {padding:10px 0; font-size:18px;}
@@ -152,6 +158,10 @@ html {
 
 ::-webkit-calendar-picker-indicator {
   filter: invert(1);
+}
+
+input::placeholder {
+  color: #fff;
 }
 
 /* media query */

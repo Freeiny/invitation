@@ -25,8 +25,9 @@
           <p>안녕하세요,</p>
           <p>받으시는 분의<br/>성함을 알고싶어요</p>
           <div class="wrap-input mt10">
-            <input type="text" placeholder="ㅇㅇ">
-            <span>님</span>
+            <input class="data-name" onkeyup='printName()' type="text">
+            <b class="data-result"></b>
+            <span>님,</span>
           </div>
           <a class="btn-userinfo" href="invitation.html">확인</a>
         </div> 
@@ -38,10 +39,18 @@
 
     const userBtn = document.querySelector('.btn-userinfo');
     userBtn.addEventListener('click', function(){
-   
-        window.locaction.href= "../index.html";
-
+           window.locaction.href= "../index.html";
     })
+
+    function printName(){
+      const inputName = document.querySelector('.data-name').value;
+      document.querySelector('.data-result').innerText = inputName;
+      localStorage.setItem('name' , inputName);
+
+    }
+
+
+
 
   </script>
 
