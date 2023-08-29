@@ -49,39 +49,54 @@ table {
 }
 a {color:#352017; text-decoration:none;}
 
+.mt20 {margin-top:20px;}
+.mt30 {margin-top:30px;}
 
 /* layout */
 
-body, html {background-color:#006bef; font-family: 'Noto Serif KR', sans-serif;
+body, html {background-color:#4130DF; font-family: 'Noto Serif KR', sans-serif;
 }
-.ly-all {position:relative; display: flex; box-sizing:border-box; flex-direction:column; z-index:999;}
+.ly-all {position:relative; display: flex; padding:0 10px; box-sizing:border-box; flex-direction:column; z-index:999;}
 .txt-mainTit a {font-size:40px; letter-spacing:5px; font-weight:normal;}
+
+.ly-contents > strong {margin-bottom:20px; line-height:26px; font-size: 20px;}
+
+.txt-greet {max-width:80%;}
+.txt-greet b {display:block; text-align:left;}
+.txt-greet em {display:block; font-size:14px; line-height:30px; margin-top:10px; text-align:left;}
+.txt-greet i {display:block; line-height:22px;}
 
 .ly-contents {display:flex; width:100%; height:100vh; flex-direction:column; text-align:center; justify-content: center;}
 .ly-contents.type-main {position:relative;}
 .ly-contents.type-main p {padding:10px 0; font-size:18px;}
 .ly-contents.type-main b {padding:10px 0; font-weight:bold; font-size:26px;}
-.ly-contents.type-main b p {font-size:26px; font-weight:lighter;}
-.ly-contents.type-main span {margin-top:20px; font-size:16px;}
+.ly-contents.type-main span {margin-top:10px; font-size:16px;}
 
 .ly-contents.type-detail {padding:0 40px; box-sizing:border-box; align-items: center}
-.ly-contents.type-detail strong {font-size:24px; margin-bottom:20px;}
 .ly-contents.type-location p,
 .ly-contents.type-location span {font-size:18px;}
-
-b.txt-greet {max-width:500px; line-height:30px; font-weight:lighter;}
 .wrap-map {width:400px; height:400px; margin:20px auto; border:1px solid #999;}
 
 
 .ly-contents.type-mind {}
-.list-mind {}
+.list-mind {width:80%; margin:0 auto;}
+.list-mind li > p {margin-bottom:20px; text-align:left;}
 .list-mind ul li {padding:4px 0;}
-.list-mind ul li input {opacity:0;}
+.list-mind ul li p {margin-bottom:10px; font-size:14px;}
+.wrap-accountnum input {opacity:0; width:0;}
+.txt-accountinfo {display:flex; justify-content: space-between;}
+.txt-accountinfo b {font-size:14px;}
+.wrap-accountnum button {border-radius:3px; border:1px solid #fff; color:#fff; background:#4130DF;}
+
+.ly-contents.type-location > p {margin:5px 0; font-size:16px;}
+
+/* photo silder */
+.slick-list {max-width:500px; height:500px; border:1px solid #ccc;}
 
 /* 스크롤바 설정*/
 
 html {
-  scrollbar-color: #006bef #ccc;
+  scrollbar-color: #64a6f6 #4130DF;
   scrollbar-width: thin;
 }
 
@@ -92,16 +107,16 @@ html {
 
 ::-webkit-scrollbar-thumb{
   height: 17%;
-  background-color:#006bef;
+  background-color:#64a6f6;
   border-radius: 10px;  
 }
 
 ::-webkit-scrollbar-track{
-  background-color: #ccc;
+  background-color: #4130DF;
 }
 
 ::-webkit-scrollbar-corner {
-  background-color: #ccc;
+  background-color: #4130DF;
 }
 
 ::-webkit-calendar-picker-indicator {
