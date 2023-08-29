@@ -55,20 +55,29 @@ a {color:#352017; text-decoration:none;}
 
 /* layout */
 
-body, html {background-color:#4130DF; font-family: 'Noto Serif KR', sans-serif;
+body, html {background-color:#56dfcc; font-family: 'Noto Serif KR', sans-serif;
 }
-.ly-all {position:relative; display: flex; padding:0 10px; box-sizing:border-box;
+.ly-all {position:relative; display: flex;box-sizing:border-box;
   align-items: center; flex-direction:column; z-index:999;}
 
+.ly-contents {padding:0 10px;}
 .ly-contents > strong {margin-bottom:20px; line-height:26px; font-size: 20px;}
 
-.ly-contents.type-fixed {position:fixed; z-index:999; top:0; bottom:0; left:0; right:0; background-color:#64a6f6;
-animation:fade-out 3s ease-in forwards;}
+.ly-contents.type-fixed {position:sticky; z-index:999; top:0; bottom:0; left:0; right:0; background-color:#56dfcc;
+animation:fade-out 2s linear forwards;}
 
 @keyframes fade-out {
-  0% {opacity:1;}
-  50% {opacity:1;}
-  100% {opacity:0; visibility:hidden;}
+  0% {opacity:1; top:0;}
+  40% {opacity:1;}
+  70% {opacity:0.4;}
+  80% {opacity:0.2; top:-100px; position:relative; visibility: hidden;}
+  100% {opacity:0;  top:-160px;  display:none;}
+}
+
+@keyframes fade-in {
+  0% {opacity:0;}
+  50% {opacity:0.2;}
+  100% {opacity:1;}
 }
 
 .txt-greet {max-width:80%;}
@@ -85,10 +94,13 @@ border-radius:30px; line-height:40px; border:1px solid #ccc; background:none; co
 
 .wrap-input input {width:100px; height:30px; background:none; border:none; border-bottom:2px solid #fff; }
 
-.ly-contents.type-main {position:relative;}
+.ly-contents.type-main {position:relative; opacity:0; animation: fade-in 4s forwards linear;}
 .ly-contents.type-main p {padding:10px 0; font-size:18px;}
 .ly-contents.type-main b {padding:10px 0; font-weight:bold; font-size:26px;}
 .ly-contents.type-main span {margin-top:10px; font-size:16px;}
+
+.ly-contents.type-gallery  {background: rgb(86,223,204);
+  background: linear-gradient(180deg, rgba(86,223,204,1) 0%, rgba(228,250,247,1) 23%, rgba(241,252,251,1) 51%, rgba(203,245,239,1) 82%, rgba(86,223,204,1) 100%);}
 
 .ly-contents.type-detail {padding:0 40px; box-sizing:border-box; align-items: center}
 .ly-contents.type-location p,
@@ -104,7 +116,7 @@ border-radius:30px; line-height:40px; border:1px solid #ccc; background:none; co
 .wrap-accountnum input {opacity:0; width:0;}
 .txt-accountinfo {display:flex; justify-content: space-between;}
 .txt-accountinfo b {font-size:14px;}
-.wrap-accountnum button {border-radius:3px; border:1px solid #fff; color:#fff; background:#4130DF;}
+.wrap-accountnum button {border-radius:3px; border:1px solid #fff; color:#fff; background:#56d1c2;}
 
 .ly-contents.type-location > p {margin:5px 0; font-size:16px;}
 
@@ -115,7 +127,7 @@ border-radius:30px; line-height:40px; border:1px solid #ccc; background:none; co
 /* 스크롤바 설정*/
 
 html {
-  scrollbar-color: #64a6f6 #4130DF;
+  scrollbar-color: #56d1c2 #56dfcc;
   scrollbar-width: thin;
 }
 
@@ -126,16 +138,16 @@ html {
 
 ::-webkit-scrollbar-thumb{
   height: 17%;
-  background-color:#64a6f6;
+  background-color:#56d1c2;
   border-radius: 10px;  
 }
 
 ::-webkit-scrollbar-track{
-  background-color: #4130DF;
+  background-color: #56dfcc;
 }
 
 ::-webkit-scrollbar-corner {
-  background-color: #4130DF;
+  background-color: #56dfcc;
 }
 
 ::-webkit-calendar-picker-indicator {
