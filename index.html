@@ -24,7 +24,6 @@
           <p>안녕하세요,</p>
           <p>받으시는 분의<br/>성함을 알고싶어요</p>
           <div class="wrap-input mt10">
-            <!-- <input class="data-name" type="text"> -->
             <input class="data-name" onkeyup='saveUser()' type="text">
             <b class="data-result"></b>
             <span>님,</span>
@@ -48,13 +47,13 @@
         textName.innerText = value;
         input.addEventListener('keydown', (e) => {
           if(e.keyCode === 13){
-            sessionStorage.setItem('Name', value)
+            localStorage.setItem('Name', value)
           }
         })
       }
 
       userBtn.addEventListener('click', function(){
-        const userNamedata = sessionStorage.getItem('Name')
+        const userNamedata = localStorage.getItem('Name')
         console.log(userNamedata)
           if(userNamedata === null){
             alert('성함을 입력해주세요')
