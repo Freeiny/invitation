@@ -125,7 +125,7 @@ color: rgba(0,0,0,0);}
 .list-mind li > p {margin-bottom:20px; text-align:left;}
 .list-mind ul li {padding:4px 0;}
 .list-mind ul li p {margin-bottom:10px; font-size:14px;}
-.wrap-accountnum input {opacity:0; width:0;}
+.wrap-accountnum textarea {opacity:0; width:0;}
 .txt-accountinfo {display:flex; justify-content: space-between;}
 .txt-accountinfo b {font-size:14px;}
 .wrap-accountnum button {border-radius:3px; border:1px solid #fff; color:#fff; background:#56d1c2;}
