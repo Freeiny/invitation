@@ -6,7 +6,6 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta property="og:title" content="인영이와 동균이의 결혼식에 초대합니다"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://freeiny.github.io/invitation/" />
     <title>INVITATION</title>
     <link href="css/style.css" rel="stylesheet" />
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -25,11 +24,12 @@
           <p>안녕하세요,</p>
           <p>받으시는 분의<br/>성함을 알고싶어요</p>
           <div class="wrap-input mt10">
-            <input class="data-name" onkeyup='printName()' type="text">
+            <!-- <input class="data-name" type="text"> -->
+            <input class="data-name" onkeyup='saveUser()' type="text">
             <b class="data-result"></b>
             <span>님,</span>
           </div>
-          <a class="btn-userinfo" href="invitation.html">확인</a>
+          <a class="btn-userinfo">확인</a>
         </div> 
 
   </body>
@@ -37,17 +37,45 @@
 
   <script>
 
-    const userBtn = document.querySelector('.btn-userinfo');
-    userBtn.addEventListener('click', function(){
-           window.locaction.href= "../index.html";
-    })
+   
 
-    function printName(){
-      const inputName = document.querySelector('.data-name').value;
-      document.querySelector('.data-result').innerText = inputName;
-      localStorage.setItem('name' , inputName);
+      const userBtn = document.querySelector('.btn-userinfo');
+      const input = document.querySelector('.data-name')
+      const textName = document.querySelector('.data-result')
 
-    }
+      function saveUser() {
+        const value = input.value;
+        textName.innerText = value;
+        input.addEventListener('keydown', (e) => {
+          if(e.keyCode === 13){
+            sessionStorage.setItem('Name', value)
+          }
+        })
+      }
+
+      userBtn.addEventListener('click', function(){
+        const userNamedata = sessionStorage.getItem('Name')
+        console.log(userNamedata)
+          if(userNamedata === null){
+            alert('성함을 입력해주세요')
+          }else{
+            location.href = 'invitation.html';
+          }
+      })
+
+      // if(nameData.length == 0){
+      //   userBtn.addEventListener('click',function(){
+      //     alert('성함을 입력해주세요')
+      //   })
+      // }else{
+      //   userBtn.addEventListener('click',function(){
+      //     location.href = 'invitation.html';
+      //   })
+      // }
+        
+
+
+
 
 
 

@@ -90,8 +90,10 @@ animation:fade-out 2.4s linear forwards;}
 
 .ly-contents.type-userinfo p,
 .ly-contents.type-userinfo span {margin:10px 0; font-size:20px; line-height:26px;}
-.ly-contents.type-userinfo .btn-userinfo {width:120px; height:40px; margin:30px auto;
-border-radius:30px; line-height:40px; border:1px solid #ccc; background:none; color:#fff;}
+.btn-userinfo {position:relative; display:block; width:100px; height:40px; margin:30px auto;
+line-height:40px; color:#fff; background: rgba(255,255,255,0.2); border-radius:20px; cursor: pointer;}
+.btn-userinfo.disabled {color:rgba(255,255,255,0.2); background: rgba(255,255,255,0.01); cursor:default;}
+
 
 .wrap-input {position:relative; width:120px; margin:10px auto; padding:0 0 10px 100px; box-sizing:border-box; border-bottom:2px solid #fff;}
 .wrap-input input {position:absolute; top:0; right:20px; width:100px; height:36px; z-index:9; background:none; border:none; box-sizing:border-box;
@@ -113,6 +115,10 @@ color: rgba(0,0,0,0);}
 .ly-contents.type-location span {font-size:18px;}
 .wrap-map {width:400px; height:400px; margin:20px auto; border:1px solid #999;}
 
+.list-maps {}
+.list-maps li {padding:3px 0;}
+.list-maps li b {margin-bottom:10px; font-size:14px; text-decoration:underline;}
+.list-maps li span {display:block; font-size:13px !important;}
 
 .ly-contents.type-mind {}
 .list-mind {width:80%; margin:0 auto;}
@@ -179,6 +185,6 @@ input::placeholder {
 
 @media (max-width: 500px) { 
 
-  .wrap-map {width:90%;}
+  .wrap-map {width:90%; height:auto;}
  
  }
