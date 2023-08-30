@@ -113,7 +113,8 @@ color: rgba(0,0,0,0);}
 .ly-contents.type-detail {padding:0 40px; box-sizing:border-box; align-items: center}
 .ly-contents.type-location p,
 .ly-contents.type-location span {font-size:18px;}
-.wrap-map {width:400px; height:400px; margin:20px auto; border:1px solid #999;}
+.wrap-map {width:400px; height:400px; margin:20px auto; padding:20px; box-sizing:border-box; border:1px solid #999;}
+.wrap-map img {width:100%;}
 
 .list-maps {}
 .list-maps li {padding:3px 0;}
