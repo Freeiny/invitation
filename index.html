@@ -24,8 +24,10 @@
           <p>안녕하세요,</p>
           <p>받으시는 분의<br/>성함을 알고싶어요</p>
           <div class="wrap-input mt10">
-            <input class="data-name" onkeyup='saveUser()' type="text">
-            <b class="data-result"></b>
+            <form></form>
+              <input class="data-name" onkeyup='saveUser()' type="text">
+              <b class="data-result"></b>
+            <form></form>
             <span>님,</span>
           </div>
           <a class="btn-userinfo">확인</a>
@@ -45,16 +47,17 @@
       function saveUser() {
         const value = input.value;
         textName.innerText = value;
-        localStorage.setItem('Name', value)
+        sessionStorage.setItem('Name', value)
         input.addEventListener('keydown', (e) => {
           if(e.keyCode === 13){
-            localStorage.setItem('Name', value)
+            sessionStorage.setItem('Name', value)
           }
         })
       }
 
+
       userBtn.addEventListener('click', function(){
-        const userNamedata = localStorage.getItem('Name')
+        const userNamedata = sessionStorage.getItem('Name')
         console.log(userNamedata)
           if(userNamedata === null){
             alert('성함을 입력해주세요')
@@ -62,6 +65,8 @@
             location.href = 'invitation.html';
           }
       })
+
+      sessionStorage.clear();
 
       // if(nameData.length == 0){
       //   userBtn.addEventListener('click',function(){
