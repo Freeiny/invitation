@@ -55,7 +55,7 @@ a {color:#352017; text-decoration:none;}
 
 /* layout */
 
-body, html {background-color:#56dfcc; font-family: 'Noto Serif KR', sans-serif;
+body, html {background-color:#25DEB2; font-family: 'Noto Serif KR', sans-serif;
   margin:0 auto; max-width:800px;}
 .ly-all {position:relative; display: flex; box-sizing:border-box;
   align-items: center; flex-direction:column; z-index:999;}
@@ -64,7 +64,7 @@ body, html {background-color:#56dfcc; font-family: 'Noto Serif KR', sans-serif;
 .ly-contents > strong,
 .ly-contents > strong > span {margin-bottom:20px; line-height:26px; font-size: 20px;}
 
-.ly-contents.type-fixed {position:absolute; z-index:999; top:0; bottom:0; left:0; right:0; background-color:#56dfcc;
+.ly-contents.type-fixed {position:absolute; z-index:999; top:0; bottom:0; left:0; right:0; background-color:#25DEB2;
 animation:fade-out 2.4s linear forwards;}
 
 @keyframes fade-out {
@@ -92,7 +92,6 @@ animation:fade-out 2.4s linear forwards;}
 .ly-contents.type-userinfo span {margin:10px 0; font-size:20px; line-height:26px;}
 .btn-userinfo {position:relative; display:block; width:100px; height:40px; margin:30px auto;
 line-height:40px; color:#fff; background: rgba(255,255,255,0.2); border-radius:20px; cursor: pointer;}
-.btn-userinfo.disabled {color:rgba(255,255,255,0.2); background: rgba(255,255,255,0.01); cursor:default;}
 
 
 .wrap-input {position:relative; width:120px; margin:10px auto; padding:0 0 10px 100px; box-sizing:border-box; border-bottom:2px solid #fff;}
@@ -107,26 +106,25 @@ color: rgba(0,0,0,0);}
 .ly-contents.type-main b {padding:10px 0; font-weight:bold; font-size:26px;}
 .ly-contents.type-main span {margin-top:10px; font-size:16px;}
 
-.ly-contents.type-gallery  {background: rgb(86,223,204);
-  background: linear-gradient(180deg, rgba(86,223,204,1) 0%, rgba(228,250,247,1) 23%, rgba(241,252,251,1) 51%, rgba(203,245,239,1) 82%, rgba(86,223,204,1) 100%);}
+.ly-contents.type-gallery  {}
 
 .ly-contents.type-detail {padding:0 40px; box-sizing:border-box; align-items: center}
 .ly-contents.type-location p,
 .ly-contents.type-location span {font-size:18px;}
-.wrap-map {min-width:340px; width:400px; height:400px; margin:20px auto;}
+.wrap-map {min-width:340px; width:400px; height:400px; margin:10px auto;}
 .wrap-map img {width:100%;}
 
 .list-maps {}
 .list-maps li {padding:3px 0;}
 .list-maps li b {margin-bottom:10px; font-size:14px; text-decoration:underline;}
-.list-maps li span {display:block; font-size:13px !important;}
+.list-maps li span {display:block; margin:10px 0; font-size:13px !important;}
 
 .ly-contents.type-mind {}
 .list-mind {width:80%; margin:0 auto;}
 .list-mind li > p {margin-bottom:20px; text-align:left;}
 .list-mind ul li {padding:4px 0;}
 .list-mind ul li p {margin-bottom:10px; font-size:14px;}
-.wrap-accountnum textarea {opacity:0; width:0;}
+.wrap-accountnum textarea {opacity:0; width:0; height:0;}
 .txt-accountinfo {display:flex; justify-content: space-between;}
 .txt-accountinfo b {font-size:14px;}
 .wrap-accountnum button {border-radius:3px; border:1px solid #fff; color:#fff; background:#56d1c2;}
@@ -134,13 +132,24 @@ color: rgba(0,0,0,0);}
 .ly-contents.type-location > p {margin:5px 0; font-size:16px;}
 
 .wrap-btn {display:flex; margin:20px 0;}
-.btn-map {display:inline-block; width:50%; height:30px; line-height:30px;; color:#fff;}
+.wrap-btn .btn-map {display:inline-block; width:50%; height:46px; line-height:46px; color:#fff; background:rgba(255,255,255,0.3)}
+.wrap-btn .btn-map.naver {background: rgba(255,255,255,0.18);}
+.wrap-btn .btn-map:hover {color:#079674;}
+
+.arrow-g {display:flex; justify-content: flex-end; margin-top:5px;}
+.arrow-area {width:40px; height:20px; cursor:pointer;}
+.arr-icon { display: inline-block; width:8px; height:18px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='11' viewBox='0 0 6 11' fill='none'%3E%3Cpath d='M0.999999 10L5 5.5L1 1' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+.arr-icon.prev {transform: rotate(180deg);}
 
 
 /* photo silder */
-.list-photo {position:relative;}
-.slick-list {max-width:90%; margin:0 auto !important; height:400px; border:1px solid #ccc;}
-.list-photo  .slick-arrow {position:absolute; bottom:-20px;}
+.wrap-gallery {width:90%; margin:0 auto;}
+.slick-list {height:400px; background: rgba(255,255,255,0.3);}
+.list-photo .slick-arrow {position:absolute; width:40px; height:20px; bottom:-20px; opacity:0;}
 .list-photo .slick-prev {right:40px;}
 .list-photo .slick-next {right:0;}
 
