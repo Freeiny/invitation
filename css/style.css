@@ -59,6 +59,7 @@ a {color:#352017; text-decoration:none;}
 
 /* layout */
 
+body {min-height: calc(100vh-70px); min-height: -webkit-fill-available;}
 body, html {background-color:#3FADBC; font-family: 'Noto Serif KR', sans-serif;
   margin:0 auto; max-width:800px; }
 .ly-all {position:relative; display: flex; box-sizing:border-box;
