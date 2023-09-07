@@ -70,7 +70,7 @@ body, html {background-color:#3FADBC; font-family: 'Noto Serif KR', sans-serif;
 
 .ly-contents.type-fixed {position:absolute; z-index:999; top:0; bottom:0; left:0; right:0; background-color:#3FADBC;
 animation:fade-out-bg 4s ease-in forwards; opacity:1;}
-.ly-contents.type-userinfo p  {position:relative; top:0; animation:fade-out 2s linear forwards;}
+.ly-contents.type-fixed p  {position:relative; top:0; animation:fade-out 2s linear forwards;}
 
 @keyframes fade-out {
   0% {top:-10px;}
