@@ -69,19 +69,30 @@ body, html {background-color:#3FADBC; font-family: 'Noto Serif KR', sans-serif;
 .ly-contents > strong > span {margin-bottom:20px; line-height:30px; font-size: 20px;}
 
 .ly-contents.type-fixed {position:absolute; z-index:999; top:0; bottom:0; left:0; right:0; background-color:#3FADBC;
-animation:fade-out 2.6s linear forwards;}
+animation:fade-out-bg 4s ease-in forwards; opacity:1;}
+.ly-contents.type-userinfo p  {position:relative; top:0; animation:fade-out 2s linear forwards;}
 
 @keyframes fade-out {
   0% {top:-10px;}
-  50% {top:-40px; }
-  100% {opacity:0;  top:-80px; display:none;} 
+  33% {top:-30px; }
+  66% {top:-50px;}
+  88% {top:-70px; opacity:0.6;}
+  100% {opacity:0; top:-90px; display:none;} 
+}
+
+@keyframes fade-out-bg {
+  0% {opacity: 1;}
+  87% {opacity: 1;}
+  88% {opacity: 0.9;}
+  100% {opacity:0;}
 }
 
 @keyframes fade-in {
   0% {opacity:0;}
-  50% {opacity:0.2;}
+  60% {opacity:0;}
+  90% {opacity:0.5;}
   100% {opacity:1;}
-}d
+}
 
 .txt-greet {margin-top:10px; max-width:80%;}
 .txt-greet b {display:block; text-align:left;}
@@ -102,7 +113,7 @@ color: rgba(0,0,0,0);}
 .wrap-input b {position:absolute; top:0; right:20px; width:100px; height:36px;line-height: 25px;
   font-size: 22px; z-index:1; white-space: nowrap; text-overflow: ellipsis; overflow:hidden; }
 
-.ly-contents.type-main {position:relative; opacity:0; animation: fade-in 4s forwards ease;}
+.ly-contents.type-main {position:relative; opacity:0; animation: fade-in 3s forwards linear;}
 .ly-contents.type-main p {padding:3px 0; letter-spacing:1.1px; font-size:16px;}
 .ly-contents.type-main b {padding:10px 0; font-weight:bold; font-size:26px; color:#dcdcdc;}
 .ly-contents.type-main b i {display:block; padding:8px 0; font-size:22px; color:#fff;}
