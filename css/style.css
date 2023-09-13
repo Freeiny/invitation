@@ -145,6 +145,8 @@ color: rgba(0,0,0,0);}
 .wrap-btn .btn-map:hover {transition:color 0.2s; color:#16646F;}
 
 
+.ly-contents.type-gallery {background-color:#fff;}
+
 .list-fm {}
 .list-fm li {padding:10px;}
 .list-fm li span {display:inline-block; min-width:160px; text-align:left; color:#ddd; font-size:13px;}
@@ -192,7 +194,7 @@ html {
 }
 
 ::-webkit-scrollbar-track{
-  background-color: #3FADBC;
+  background-color: #b5e8ee;
 }
 
 ::-webkit-scrollbar-corner {
