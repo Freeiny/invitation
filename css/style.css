@@ -70,7 +70,7 @@ body, html {background-color:#3FADBC; font-family: 'Noto Serif KR', sans-serif;
 .ly-contents > strong,
 .ly-contents > strong > span {margin-bottom:20px; line-height:30px;}
 
-.ly-contents.type-fixed {position:absolute; z-index:999; top:0; bottom:0; left:0; right:0; background-color:#3FADBC;
+.ly-contents.type-userinfo.type-fixed {position:absolute; padding:0; z-index:999; top:0; left:0; right:0; height:100vh; background-color:#3FADBC;
 animation:fade-out-bg 4s ease-in forwards; opacity:1;}
 .ly-contents.type-fixed p  {position:relative; top:0; animation:fade-out 2s linear forwards;}
 
@@ -101,9 +101,8 @@ animation:fade-out-bg 4s ease-in forwards; opacity:1;}
 .txt-greet em {display:block; line-height:30px; margin-top:10px; text-align:left;}
 .txt-greet i {display:block; line-height:22px; color:#e2e2e2;}
 
-.ly-contents {display:flex; width:100%; padding: 220px 0; height:auto; overflow-y: scroll; flex-direction:column; text-align:center; justify-content: center;}
+.ly-contents {display:flex; width:100%; padding: 220px 0; height:auto; overflow-y:auto; flex-direction:column; text-align:center; justify-content: center;}
 .ly-contents.type-last {padding:220px 0 280px 0;}
-.ly-contents.type-userinfo {padding:0; height:calc(100vh - 70px)}
 .ly-contents.type-userinfo p,
 .ly-contents.type-userinfo span {margin:10px 0; line-height:26px;}
 .btn-userinfo {position:relative; display:block; width:100px; height:40px; margin:30px auto;
@@ -145,7 +144,7 @@ color: rgba(0,0,0,0);}
 .wrap-btn .btn-map:hover {transition:color 0.2s; color:#16646F;}
 
 
-.ly-contents.type-gallery {background-color:#fff;}
+/* .ly-contents.type-gallery {background-color:#fff;} */
 
 .list-fm {}
 .list-fm li {padding:10px;}
