@@ -70,31 +70,10 @@ body, html {background-color:#3FADBC; font-family: 'Noto Serif KR', sans-serif;
 .ly-contents > strong,
 .ly-contents > strong > span {margin-bottom:20px; line-height:30px;}
 
-.ly-contents.type-userinfo.type-fixed {position:absolute; padding:0; z-index:999; top:0; left:0; right:0; height:100vh; background-color:#3FADBC;
+.ly-contents.type-fixed {position:absolute; padding:0; z-index:999; top:0; left:0; right:0; height:100vh; background-color:#3FADBC;
 animation:fade-out-bg 4s ease-in forwards; opacity:1;}
-.ly-contents.type-fixed p  {position:relative; top:0; animation:fade-out 2s linear forwards;}
+.ly-contents.type-fixed p  {position:relative; top:0; padding:10px 0; animation:fade-out 2s linear forwards;}
 
-@keyframes fade-out {
-  0% {top:-10px;}
-  33% {top:-30px; }
-  66% {top:-50px;}
-  88% {top:-70px; opacity:0.6;}
-  100% {opacity:0; top:-90px; display:none;} 
-}
-
-@keyframes fade-out-bg {
-  0% {opacity: 1;}
-  87% {opacity: 1;}
-  88% {opacity: 0.9;}
-  100% {opacity:0;}
-}
-
-@keyframes fade-in {
-  0% {opacity:0;}
-  60% {opacity:0;}
-  90% {opacity:0.5;}
-  100% {opacity:1;}
-}
 
 .txt-greet {margin-top:10px; max-width:80%;}
 .txt-greet b {display:block; text-align:left;}
@@ -115,7 +94,8 @@ color: rgba(0,0,0,0);}
 .wrap-input b {position:absolute; top:0; right:20px; width:100px; height:36px;line-height: 25px;
  z-index:1; white-space: nowrap; text-overflow: ellipsis; overflow:hidden; }
 
-.ly-contents.type-main {position:relative; opacity:0; animation: fade-in 3s forwards linear;}
+.ly-all {animation: fade-in 3s forwards linear; opacity:0;}
+.ly-contents.type-main {position:relative;}
 .ly-contents.type-main span {padding:10px 0; font-weight:bold;}
 .ly-contents.type-main span i {display:block; padding:8px 0;}
 .ly-contents.type-main p {padding:3px 0; letter-spacing:1.1px;}
@@ -174,7 +154,78 @@ color: rgba(0,0,0,0);}
   overflow: hidden; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='11' viewBox='0 0 6 11' fill='none'%3E%3Cpath d='M0.999999 10L5 5.5L1 1' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
 .arr-icon.prev {transform: rotate(180deg);}
 
-/* 스크롤바 설정*/
+
+/* svg icon */
+
+
+.svg-icon {
+  position:fixed;
+  display: inline-block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+
+.svg-icon.ic-star{
+  width:14px;
+  height:14px;
+  background-image: url("data:image/svg+xml,%3Csvg width='64px' height='64px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M9.15316 5.40838C10.4198 3.13613 11.0531 2 12 2C12.9469 2 13.5802 3.13612 14.8468 5.40837L15.1745 5.99623C15.5345 6.64193 15.7144 6.96479 15.9951 7.17781C16.2757 7.39083 16.6251 7.4699 17.3241 7.62805L17.9605 7.77203C20.4201 8.32856 21.65 8.60682 21.9426 9.54773C22.2352 10.4886 21.3968 11.4691 19.7199 13.4299L19.2861 13.9372C18.8096 14.4944 18.5713 14.773 18.4641 15.1177C18.357 15.4624 18.393 15.8341 18.465 16.5776L18.5306 17.2544C18.7841 19.8706 18.9109 21.1787 18.1449 21.7602C17.3788 22.3417 16.2273 21.8115 13.9243 20.7512L13.3285 20.4768C12.6741 20.1755 12.3469 20.0248 12 20.0248C11.6531 20.0248 11.3259 20.1755 10.6715 20.4768L10.0757 20.7512C7.77268 21.8115 6.62118 22.3417 5.85515 21.7602C5.08912 21.1787 5.21588 19.8706 5.4694 17.2544L5.53498 16.5776C5.60703 15.8341 5.64305 15.4624 5.53586 15.1177C5.42868 14.773 5.19043 14.4944 4.71392 13.9372L4.2801 13.4299C2.60325 11.4691 1.76482 10.4886 2.05742 9.54773C2.35002 8.60682 3.57986 8.32856 6.03954 7.77203L6.67589 7.62805C7.37485 7.4699 7.72433 7.39083 8.00494 7.17781C8.28555 6.96479 8.46553 6.64194 8.82547 5.99623L9.15316 5.40838Z' fill='%23ffffff'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+}
+.svg-icon.ic-star2 {
+  width:14px;
+  height:14px;
+  background-image: url("data:image/svg+xml,%3Csvg width='64px' height='64px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M14.857 4.92587C13.7901 2.35805 10.2099 2.35804 9.14297 4.92587L8.58369 6.27189C8.361 6.80784 7.87574 7.17228 7.3211 7.23508L5.76039 7.41179C3.12208 7.71052 2.0693 10.9949 3.96629 12.8289L5.29142 14.11C5.68291 14.4885 5.85894 15.0499 5.75098 15.596L5.43104 17.2142C4.89984 19.901 7.795 21.9982 10.1279 20.5005L11.1745 19.8286C11.6797 19.5043 12.3203 19.5043 12.8255 19.8286L13.8721 20.5005C16.205 21.9982 19.1002 19.901 18.569 17.2142L18.249 15.596C18.1411 15.0499 18.3171 14.4885 18.7086 14.11L20.0337 12.8289C21.9307 10.9949 20.8779 7.71052 18.2396 7.41179L16.6789 7.23508C16.1243 7.17228 15.639 6.80784 15.4163 6.27189L14.857 4.92587Z' fill='%23ffffff'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+}
+.svg-icon.ic-star3 
+{
+  width:14px;
+  height:14px;
+  background-image: url("data:image/svg+xml,%3Csvg width='64px' height='64px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M12 3L14.0357 8.16153C14.2236 8.63799 14.3175 8.87622 14.4614 9.0771C14.5889 9.25516 14.7448 9.41106 14.9229 9.53859C15.1238 9.68245 15.362 9.77641 15.8385 9.96432L21 12L15.8385 14.0357C15.362 14.2236 15.1238 14.3175 14.9229 14.4614C14.7448 14.5889 14.5889 14.7448 14.4614 14.9229C14.3175 15.1238 14.2236 15.362 14.0357 15.8385L12 21L9.96432 15.8385C9.77641 15.362 9.68245 15.1238 9.53859 14.9229C9.41106 14.7448 9.25516 14.5889 9.0771 14.4614C8.87622 14.3175 8.63799 14.2236 8.16153 14.0357L3 12L8.16153 9.96432C8.63799 9.77641 8.87622 9.68245 9.0771 9.53859C9.25516 9.41106 9.41106 9.25516 9.53859 9.0771C9.68245 8.87622 9.77641 8.63799 9.96432 8.16153L12 3Z' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+}
+
+.ic01 {top:1%; left:2%;}
+.ic02 {top:3%; left:40%;}
+.ic03 {opacity:0.6; top:10%; left:80%; animation:circle infinite 5s linear;}
+.ic04 {opacity:0.8; top:20%; left:20%; animation:circle infinite 12s linear;}
+.ic05 {opacity:0.7; top:40%; left:90%; animation:circle infinite 8s linear;}
+.ic06 {opacity:1; top:60%; left:12%; animation:circle infinite 10s linear;}
+.ic07 {opacity:0.5; top:80%; left:84%; animation:circle infinite 9s linear;}
+
+
+
+
+@keyframes fade-out {
+  0% {top:-10px;}
+  33% {top:-30px; }
+  66% {top:-50px;}
+  88% {top:-70px; opacity:0.6;}
+  100% {opacity:0; top:-90px; display:none;} 
+}
+
+@keyframes fade-out-bg {
+  0% {opacity: 1;}
+  87% {opacity: 1;}
+  88% {opacity: 0.9;}
+  100% {opacity:0;}
+}
+
+@keyframes fade-in {
+  0% {opacity:0;}
+  60% {opacity:0;}
+  90% {opacity:0.5;}
+  100% {opacity:1;}
+}
+
+@keyframes circle {
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(180deg);}
+  100% {transform: rotate(360deg);}
+}
+
+
+
+/* scrollbar */
 
 html {
   scrollbar-color: #2792A0 #3FADBC;
