@@ -19,6 +19,7 @@
 
 * {
   font-family: 'Noto Serif KR', serif;
+  letter-spacing:-1px;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -84,15 +85,39 @@ a {color:#352017; text-decoration:none;}
 
 /* layout */
 
-body, html {background-color:#3FADBC; margin:0 auto; max-width:600px; }
-.ly-all {position:relative; display: flex; box-sizing:border-box;
-  align-items: center; flex-direction:column; z-index:999;}
+body, html {
+  background-color:#3FADBC;
+  margin:0 auto;
+  max-width:600px;
+}
+.ly-start {position:relative;
+  display: flex;
+  box-sizing:border-box;
+  align-items:center;
+  flex-direction:column;
+  z-index:999;}
+.ly-all {position:relative;
+  display: flex;
+  box-sizing:border-box;
+  align-items: center;
+  flex-direction:column; 
+  z-index:999; 
+  animation: fade-in 3s forwards linear;
+  opacity:0;}
 
 .ly-contents > strong,
 .ly-contents > strong > span {margin-bottom:20px; line-height:30px;}
 
-.ly-contents.type-fixed {position:absolute; padding:0; z-index:999; top:0; left:0; right:0; height:100vh; background-color:#3FADBC;
-animation:fade-out-bg 4s ease-in forwards; opacity:1;}
+.ly-contents.type-fixed {position:absolute;
+  padding:0;
+  z-index:999;
+  top:0;
+  left:0;
+  right:0;
+  height:100vh;
+  background-color:#3FADBC;
+  animation:fade-out-bg 4s ease-in forwards;
+  opacity:1;}
 .ly-contents.type-fixed p  {position:relative; top:0; padding:10px 0; animation:fade-out 2s linear forwards;}
 
 
@@ -115,7 +140,7 @@ color: rgba(0,0,0,0);}
 .wrap-input b {position:absolute; top:0; right:20px; width:100px; height:36px;line-height: 25px;
  z-index:1; white-space: nowrap; text-overflow: ellipsis; overflow:hidden; }
 
-.ly-all {animation: fade-in 3s forwards linear; opacity:0;}
+
 .ly-contents.type-main {position:relative;}
 .ly-contents.type-main span {font-weight:bold;}
 .ly-contents.type-main span i {display:block; padding:8px 0;}
@@ -199,8 +224,8 @@ color: rgba(0,0,0,0);}
 }
 .svg-icon.ic-star3 
 {
-  width:16px;
-  height:16px;
+  width:15px;
+  height:15px;
   background-image: url("data:image/svg+xml,%3Csvg width='64px' height='64px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M12 3L14.0357 8.16153C14.2236 8.63799 14.3175 8.87622 14.4614 9.0771C14.5889 9.25516 14.7448 9.41106 14.9229 9.53859C15.1238 9.68245 15.362 9.77641 15.8385 9.96432L21 12L15.8385 14.0357C15.362 14.2236 15.1238 14.3175 14.9229 14.4614C14.7448 14.5889 14.5889 14.7448 14.4614 14.9229C14.3175 15.1238 14.2236 15.362 14.0357 15.8385L12 21L9.96432 15.8385C9.77641 15.362 9.68245 15.1238 9.53859 14.9229C9.41106 14.7448 9.25516 14.5889 9.0771 14.4614C8.87622 14.3175 8.63799 14.2236 8.16153 14.0357L3 12L8.16153 9.96432C8.63799 9.77641 8.87622 9.68245 9.0771 9.53859C9.25516 9.41106 9.41106 9.25516 9.53859 9.0771C9.68245 8.87622 9.77641 8.63799 9.96432 8.16153L12 3Z' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
 }
 
