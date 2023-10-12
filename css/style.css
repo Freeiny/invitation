@@ -1,3 +1,26 @@
+@font-face {
+  font-family: 'Noto Serif KR';
+  src:url('../fonts/NotoSerifKR-Light.woff') format('woff'),
+  url('../fonts/NotoSerifKR-Light.otf') format('otf');
+  font-weight: 300;
+} 
+@font-face {
+  font-family: 'Noto Serif KR';
+  src:url('../fonts/NotoSerifKR-Medium.woff') format('woff'),
+  url('../fonts/NotoSerifKR-Medium.otf') format('otf');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Noto Serif KR';
+  src:url('../fonts/NotoSerifKR-Bold.woff') format('woff'),
+  url('../fonts/NotoSerifKR-Bold.otf') format('otf');
+  font-weight: 700;
+} 
+
+* {
+  font-family: 'Noto Serif KR', serif;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -15,7 +38,6 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 14px;
-	/* font: inherit; */
 	vertical-align: baseline;
   color:#fff;
 }
@@ -62,8 +84,7 @@ a {color:#352017; text-decoration:none;}
 
 /* layout */
 
-body, html {background-color:#3FADBC; font-family: 'Noto Serif KR', sans-serif;
-  margin:0 auto; max-width:800px; }
+body, html {background-color:#3FADBC; margin:0 auto; max-width:600px; }
 .ly-all {position:relative; display: flex; box-sizing:border-box;
   align-items: center; flex-direction:column; z-index:999;}
 
@@ -96,9 +117,9 @@ color: rgba(0,0,0,0);}
 
 .ly-all {animation: fade-in 3s forwards linear; opacity:0;}
 .ly-contents.type-main {position:relative;}
-.ly-contents.type-main span {padding:10px 0; font-weight:bold;}
+.ly-contents.type-main span {font-weight:bold;}
 .ly-contents.type-main span i {display:block; padding:8px 0;}
-.ly-contents.type-main p {padding:3px 0; letter-spacing:1.1px;}
+.ly-contents.type-main p {padding:3px 0; letter-spacing:-0.8px;}
 .ly-contents.type-detail {padding:0 40px; box-sizing:border-box; align-items: center;}
 
 .wrap-map {min-width:340px; width:400px; height:400px; margin:10px auto;}
@@ -118,7 +139,7 @@ color: rgba(0,0,0,0);}
 
 .ly-contents.type-location > p {margin:5px 0;}
 
-.wrap-btn {display:flex; margin:20px 0;}
+.wrap-btn {display:flex; width:80%; margin:20px auto;}
 .wrap-btn .btn-map {display:inline-block; width:50%; height:46px; line-height:46px; color:#fff; background:rgba(255,255,255,0.3)}
 .wrap-btn .btn-map.naver {background: rgba(255,255,255,0.18);}
 .wrap-btn .btn-map:hover {transition:color 0.2s; color:#16646F;}
@@ -126,7 +147,6 @@ color: rgba(0,0,0,0);}
 
 /* .ly-contents.type-gallery {background-color:#fff;} */
 
-.list-fm {}
 .list-fm li {padding:10px;}
 .list-fm li span {display:inline-block; min-width:160px; text-align:left; color:#ddd; font-size:13px;}
 .list-fm li span i {position:relative; padding:0 4px; color:#fff; font-size:14px;}
@@ -179,17 +199,17 @@ color: rgba(0,0,0,0);}
 }
 .svg-icon.ic-star3 
 {
-  width:14px;
-  height:14px;
+  width:16px;
+  height:16px;
   background-image: url("data:image/svg+xml,%3Csvg width='64px' height='64px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M12 3L14.0357 8.16153C14.2236 8.63799 14.3175 8.87622 14.4614 9.0771C14.5889 9.25516 14.7448 9.41106 14.9229 9.53859C15.1238 9.68245 15.362 9.77641 15.8385 9.96432L21 12L15.8385 14.0357C15.362 14.2236 15.1238 14.3175 14.9229 14.4614C14.7448 14.5889 14.5889 14.7448 14.4614 14.9229C14.3175 15.1238 14.2236 15.362 14.0357 15.8385L12 21L9.96432 15.8385C9.77641 15.362 9.68245 15.1238 9.53859 14.9229C9.41106 14.7448 9.25516 14.5889 9.0771 14.4614C8.87622 14.3175 8.63799 14.2236 8.16153 14.0357L3 12L8.16153 9.96432C8.63799 9.77641 8.87622 9.68245 9.0771 9.53859C9.25516 9.41106 9.41106 9.25516 9.53859 9.0771C9.68245 8.87622 9.77641 8.63799 9.96432 8.16153L12 3Z' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
 }
 
 .ic01 {top:1%; left:2%;}
 .ic02 {top:3%; left:40%;}
-.ic03 {opacity:0.6; top:10%; left:80%; animation:circle infinite 5s linear;}
+.ic03 {opacity:0.6; top:10%; left:80%; animation:circle infinite 4s linear;}
 .ic04 {opacity:0.8; top:20%; left:20%; animation:circle infinite 12s linear;}
 .ic05 {opacity:0.7; top:40%; left:90%; animation:circle infinite 8s linear;}
-.ic06 {opacity:1; top:60%; left:12%; animation:circle infinite 10s linear;}
+.ic06 {opacity:1; top:60%; left:12%; animation:circle infinite 4s linear;}
 .ic07 {opacity:0.5; top:80%; left:84%; animation:circle infinite 9s linear;}
 
 
