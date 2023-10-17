@@ -22,6 +22,7 @@
           <p class="txt-lg">안녕하세요,<br/>
           받으시는 분의<br/>성함을 알고싶어요</p>
           <div class="wrap-input mt10 txt-lg">
+            <i class="img-curser"></i>
             <form></form>
               <input class="data-name txt-lg" onkeyup='saveUser()' type="text">
               <b class="data-result txt-lg"></b>
@@ -35,9 +36,6 @@
 
 
   <script>
-
-   
-
       const userBtn = document.querySelector('.btn-userinfo');
       const input = document.querySelector('.data-name')
       const textName = document.querySelector('.data-result')
@@ -53,12 +51,11 @@
         })
       }
 
-
       userBtn.addEventListener('click', function(){
         const userNamedata = sessionStorage.getItem('Name')
         console.log(userNamedata)
           if(userNamedata === null){
-            alert('안녕하세요! 성함을 입력해주세요')
+            alert('안녕하세요, 성함을 입력해주세요')
           }else{
             location.href = 'invitation.html';
           }
@@ -66,21 +63,12 @@
 
       sessionStorage.clear();
 
-      // if(nameData.length == 0){
-      //   userBtn.addEventListener('click',function(){
-      //     alert('성함을 입력해주세요')
-      //   })
-      // }else{
-      //   userBtn.addEventListener('click',function(){
-      //     location.href = 'invitation.html';
-      //   })
-      // }
-        
-
-
-
-
-
+      //  커서 포커스시 사라지게
+      const curserArea = document.querySelector('.wrap-input');
+      const curser = document.querySelector('.img-curser');
+      curserArea.addEventListener('click', function(){
+        curser.classList.add('hidden')
+      })
 
 
   </script>
