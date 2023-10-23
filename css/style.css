@@ -134,6 +134,7 @@ body, html {
   flex-direction:column;
   text-align:center;
   justify-content: center;}
+.ly-contents.type-main {padding:0;}
 .ly-contents.type-last {padding:220px 0 280px 0;}
 .ly-contents.type-userinfo p,
 .ly-contents.type-userinfo span {margin:10px 0; line-height:30px;}
@@ -152,12 +153,14 @@ line-height:40px; color:#52cfc8; border:1px solid #52cfc8; background:rgba(255,2
 .wrap-input b {position:absolute; top:0; right:20px; width:100px; height:36px;line-height: 25px;
  z-index:1; white-space: nowrap; text-overflow: ellipsis; overflow:hidden; }
 
+.img-main {width:100%; height:auto;}
+.img-main img {width:100%;}
 
 .ly-contents.type-main {position:relative;}
 .ly-contents.type-main span {font-weight:bold;}
-.ly-contents.type-main span i {display:block; padding:8px 0;}
+.ly-contents.type-main span i {padding:0 4px;}
 .ly-contents.type-main p {padding:3px 0; letter-spacing:-0.8px;}
-.ly-contents.type-detail {padding:0 40px; box-sizing:border-box; align-items: center;}
+.ly-contents.type-detail {padding:20px 40px; box-sizing:border-box; align-items: center;}
 
 .ly-contents.type-mind p {line-height:24px;}
 
