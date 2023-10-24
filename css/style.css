@@ -173,6 +173,8 @@ line-height:40px; color:#52cfc8; border:1px solid #52cfc8; background:rgba(255,2
 .list-maps li b {display:block; color:#555; margin-bottom:8px; text-decoration:underline;}
 .list-maps li span {display:block; margin:10px 0;}
 .list-maps li i {font-weight:bold;} 
+.list-maps li.bus span {margin:0 0 10px 0;}
+.list-maps li i {color:#1d7e81;}
 
 .list-mind {width:70%; margin:30px auto 0 auto;}
 .list-mind li > p {font-weight:bold; text-align:left;}
