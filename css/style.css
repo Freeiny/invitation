@@ -41,7 +41,7 @@ time, mark, audio, video {
 	font-size: 15px;
 	vertical-align: baseline;
   color:#52cfc8;
-  line-height:1.4em;
+  line-height:1.3em;
 }
 em, i {font-style: normal;}
 /* HTML5 display-role reset for older browsers */
@@ -123,7 +123,7 @@ body, html {
   background-color:#fff5ce;
   animation:fade-out-bg 4s ease-in forwards;
   opacity:1;}
-.ly-contents.type-fixed p  {position:relative; top:0; padding:10px 0; animation:fade-out 2s linear forwards;}
+.ly-contents.type-fixed p  {position:relative; top:0; padding:6px 0; animation:fade-out 2s linear forwards;}
 
 .txt-greet {margin-top:10px; max-width:80%;}
 .txt-greet b {display:block; text-align:left;}
@@ -150,7 +150,7 @@ line-height:40px; color:#52cfc8; border:1px solid #52cfc8; background:rgba(255,2
   color: rgba(0,0,0,0);
 }
 .wrap-input input:focus-visible {outline:none; border:1px solid #ccc;}
-.wrap-input b {position:absolute; top:0; right:20px; width:100px; height:36px;line-height: 25px;
+.wrap-input b {position:absolute; top:0; right:20px; width:100px; height:36px;line-height:34px;
  z-index:1; white-space: nowrap; text-overflow: ellipsis; overflow:hidden; }
 
 .img-main {width:100%; height:auto;}
@@ -197,11 +197,12 @@ line-height:40px; color:#52cfc8; border:1px solid #52cfc8; background:rgba(255,2
 .ly-contents.type-fm img {margin:0 auto;}
 
 .list-fm li {padding:10px;}
-.list-fm li span {display:inline-block; min-width:160px; text-align:left;font-size:13px;}
-.list-fm li span i {position:relative; padding:0 4px; font-size:14px;}
+.list-fm li span {display:inline-block; min-width:160px; text-align:left;font-size:14px;}
+.list-fm li span i {position:relative; padding:0 4px; font-size:16px;}
 .list-fm li span i:first-child::after {position:absolute;
-  top:8px; right:-3px; width:3px; height:3px;
+  top:6px; right:-3px; width:3px; height:3px;
   background-color:#52C8CF; border-radius:50%; content:'';}
+.list-fm li  em {display:inline-block; width:60px; text-align:right;}
 
 
 /* photo silder */
