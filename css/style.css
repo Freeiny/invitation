@@ -122,7 +122,7 @@ body, html {
   right:0;
   height:100vh;
   background-color:#fff5ce;
-  animation:fade-out-bg 4s ease-in forwards;
+  animation:fade-out-bg 2s ease-in forwards;
   opacity:1;}
 .ly-contents.type-fixed p  {position:relative; top:0; padding:6px 0; animation:fade-out 2s linear forwards;}
 
