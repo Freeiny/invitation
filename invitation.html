@@ -284,17 +284,20 @@
     }
    
     //화살표돌아가기
-    const details = document.querySelector('details')
-    details.addEventListener("toggle", (event) => {
-      const arr = document.querySelector('summary .arr-icon')
-      if (details.open) {
-        arr.classList.add('up');
-        arr.classList.remove('down');
+    const details = document.querySelectorAll('details')
+    const arr = document.querySelectorAll('summary .arr-icon')
+    for( let i = 0; i < details.length; i++) {
+      details[i].addEventListener("toggle", (event) => {
+      if (details[i].open) {
+        arr[i].classList.add('up');
+        arr[i].classList.remove('down');
       } else {
-        arr.classList.remove('up');
-        arr.classList.add('down');
+        arr[i].classList.remove('up');
+        arr[i].classList.add('down');
       }
     });
+    }
+    
     </script>
 
   </body>
