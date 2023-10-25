@@ -1,24 +1,25 @@
 @font-face {
-  font-family: 'Noto Serif KR';
-  src:url('../fonts/NotoSerifKR-Light.woff') format('woff'),
-  url('../fonts/NotoSerifKR-Light.otf') format('otf');
+  font-family: 'Noto Sans KR';
+  src:url('../fonts/NotoSans-Light.woff') format('woff'),
+  url('../fonts/NotoSans-Light.otf') format('otf');
   font-weight: 300;
 } 
 @font-face {
-  font-family: 'Noto Serif KR';
-  src:url('../fonts/NotoSerifKR-Medium.woff') format('woff'),
-  url('../fonts/NotoSerifKR-Medium.otf') format('otf');
+  font-family: 'Noto Sans KR';
+  src:url('../fonts/NotoSans-Medium.woff') format('woff'),
+  url('../fonts/NotoSans-Medium.otf') format('otf');
   font-weight: 500;
 }
 @font-face {
-  font-family: 'Noto Serif KR';
-  src:url('../fonts/NotoSerifKR-Bold.woff') format('woff'),
-  url('../fonts/NotoSerifKR-Bold.otf') format('otf');
-  font-weight: 700;
+  font-family: 'Noto Sans KR';
+  src:url('../fonts/NotoSans-Bold.woff') format('woff'),
+  url('../fonts/NotoSans-Bold.otf') format('otf');
+  font-weight: 600;
 } 
 
+
 * {
-  font-family: 'Noto Serif KR', serif;
+  font-family: 'Noto Sans KR', sans-serif;
   letter-spacing:-1px;
 }
 
