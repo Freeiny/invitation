@@ -98,9 +98,9 @@
               <div class="data-photo">
                 <img src="images/p4.png">
               </div>
-              <div class="data-photo">
+              <!-- <div class="data-photo">
                <img src="images/p1.png">
-              </div>
+              </div> -->
               <div class="data-photo">
                 <img src="images/p3.png">
               </div>
@@ -313,17 +313,18 @@
   document.onkeyup=uncheckCtrlShift;
   function keycheck()
   {
-      switch(event.keyCode){ 
-        case 123:event.keyCode='';return false; break; //F12
-        case 17:event.keyCode='';keydownCtrl=1;return false; break; //컨트롤키
-      }
+    switch(event.keyCode){ 
+      case 123:event.keyCode='';return false; break; //F12
+      case 73:event.keyCode='';return false; break; //쉬프트
+      case 17:event.keyCode='';keydownCtrl=1;return false; break; //컨트롤키
+    }
 
-      if(keydownCtrl) return false;
+    if(keydownCtrl) return false;
   }
   function uncheckCtrlShift()
   {
-    if(event.keyCode==17)      keydownCtrl=0;
-    if(event.keyCode==16)      keydownShift=0;
+    if(event.keyCode==17)  keydownCtrl=0;
+    if(event.keyCode==16)  keydownShift=0;
   }
       
   function click() {
