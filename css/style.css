@@ -233,7 +233,7 @@ line-height:40px; color:#52cfc8; border:1px solid #52cfc8; background:rgba(255,2
 .slick-dots li button {display:inline-block; width:10px; height:4px; background-color:rgb(244, 231, 158); border:none; text-indent:-9999px;}
 .slick-dots li.slick-active button {background-color:#52C8CF;}
 
-.arrow-g {display:flex; justify-content: flex-end; margin-top:-24px;}
+.arrow-g {display:flex; justify-content: flex-end; margin:-24px 10px 0 0;}
 .arrow-area {width:30px; height:20px; cursor:pointer;}
 .arr-icon { display: inline-block; width:12px; height:20px;
   background-size: cover;
