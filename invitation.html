@@ -16,7 +16,7 @@
 
     
   </head>
-  <body>
+  <body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
     
     <div class="ly-contents type-fixed">
       <p class="txt-lg"><span class="txt-userid txt-lg color-pi"></span>님,</p>
@@ -61,6 +61,8 @@
         </div>
 
         <div class="ly-contents type-fm">
+          <strong data-aos="fade-in" class="txt-lg">
+            인사 올립니다,</strong>
           <ul class="list-fm">
             <li>
               <span>
@@ -261,6 +263,9 @@
 
     <script>
 
+    //min
+    
+
     // slick
     $(document).on('ready', function() {
           $(".list-photo").slick({
@@ -303,6 +308,38 @@
       }
     });
     }
+
+    // codeprotect
+   
+  var keydownCtrl = 0;
+  var keydownShift = 0;
+
+  document.onkeydown=keycheck;
+  document.onkeyup=uncheckCtrlShift;
+  function keycheck()
+  {
+    switch(event.keyCode){ 
+      case 123:event.keyCode='';return false; break; //F12
+      case 73:event.keyCode='';return false; break; //쉬프트
+      case 17:event.keyCode='';keydownCtrl=1;return false; break; //컨트롤키
+    }
+
+    if(keydownCtrl) return false;
+  }
+  function uncheckCtrlShift()
+  {
+    if(event.keyCode==17)  keydownCtrl=0;
+    if(event.keyCode==16)  keydownShift=0;
+  }
+      
+  function click() {
+    if ((event.button==2) || (event.button==3)) {
+    alert('우클릭은 사용할 수 없습니다!');
+    }
+    }
+  document.onmousedown=click
+  
+
     
     </script>
 
