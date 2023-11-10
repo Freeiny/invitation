@@ -138,7 +138,7 @@ body, html {
   text-align:center;
   justify-content: center;}
 .ly-contents.type-last {padding:220px 0 280px 0;}
-.ly-contents.type-last img {width:50%; margin:0 auto;}
+.ly-contents.type-last img {width:36%; margin:0 auto;}
 .ly-contents.type-userinfo p,
 .ly-contents.type-userinfo span {margin:10px 0; line-height:30px;}
 .btn-userinfo {position:relative; display:block; width:100px; height:40px; margin:30px auto;
