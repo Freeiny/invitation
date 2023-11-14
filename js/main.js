@@ -6,13 +6,7 @@
     document.execCommand("Copy");
     alert('감사합니다, 복사되었습니다.');
   }
-  // 이름배열
-  const nameData = sessionStorage.getItem('Name')
-  const writeName = document.querySelectorAll('.txt-userid');
-  for (let i = 0; i <writeName.length; i++){
-    writeName[i].innerText = nameData;
-  }
- 
+
   //화살표돌아가기
   const details = document.querySelectorAll('details')
   const arr = document.querySelectorAll('summary .arr-icon')

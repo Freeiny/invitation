@@ -13,7 +13,6 @@
     <script src="js/slick.js" type="text/javascript"></script>
     <script src="js/aos.js" type="text/javascript"></script>
     <script src="js/main.js" type="text/javascript"></script>
-    <link rel="shortcut icon" href="images/favicon.ico">
 
     
   </head>
@@ -37,7 +36,7 @@
         <div class="ly-contents type-main">
           <span class="txt-lg mt10">양인영<i class="txt-lg">&</i>김동균</span>
           <p class="txt-md mt30">2024년 2월 3일 오후 12시30분</p>
-          <span class="color-gr txt-md mt6">더 컨벤션 송파문정 아모르홀 13층</span>
+          <span class="color-gr txt-md mt6">더 컨벤션 송파 문정 아모르홀 13층</span>
           <i class="img-main">
             <img src="images/img_main.png">
           </i>
@@ -63,6 +62,7 @@
 
         <div class="ly-contents type-fm">
           <strong data-aos="fade-in" class="txt-lg">
+            <p class="color-pi">인영 <span class="color-ye">&</span> 동균</p>
             인사 올립니다,</strong>
           <ul class="list-fm">
             <li>
@@ -263,8 +263,6 @@
 
 
     <script>
-
-
     // slick
     $(document).on('ready', function() {
           $(".list-photo").slick({
@@ -278,7 +276,14 @@
     AOS.init({
       easing: 'linear'
     });  
-   
+
+      // N
+    const nameData = sessionStorage.getItem('Name')
+    const writeName = document.querySelectorAll('.txt-userid');
+    for (let i = 0; i <writeName.length; i++){
+      writeName[i].innerText = nameData;
+    }
+  
     </script>
 
   </body>
