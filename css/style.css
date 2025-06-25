@@ -41,7 +41,7 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 15px;
 	vertical-align: baseline;
-  color:#52cfc8;
+  color:#47c0b9;
   line-height:1.3em;
 }
 em, i {font-style: normal;}
@@ -110,7 +110,7 @@ body, html {
   align-items: center;
   flex-direction:column; 
   z-index:999; 
-  animation: fade-in 1s forwards linear;
+  animation: fade-in 2s forwards linear;
   opacity:0;}
 
 .ly-contents > strong,
@@ -125,9 +125,9 @@ body, html {
   right:0;
   height:100vh;
   background-color:#fff5ce;
-  animation:fade-out-bg 2s ease-in forwards;
+  animation:fade-out-bg 1.2s ease-out forwards;
   opacity:1;}
-.ly-contents.type-fixed p  {position:relative; font-weight:bold; top:0; padding:6px 0; animation:fade-out 2s linear forwards;}
+.ly-contents.type-fixed p  {position:relative; font-weight:bold; top:0; padding:3px 0; animation:fade-out 2s linear forwards;}
 
 .txt-greet {margin-top:10px; max-width:80%;}
 .txt-greet b {display:block; text-align:left;}
@@ -148,7 +148,7 @@ line-height:40px; color:#52cfc8; border:1px solid #52cfc8; background:rgba(255,2
 
 .wrap-input {position:relative; width:120px; margin:10px auto; padding:0 0 10px 100px;
   box-sizing:border-box;
-  border-bottom:2px solid #FFCDE5;}
+  border-bottom:2px solid #ffea94;}
 .wrap-input input {position:absolute; top:0; right:20px; width:100px; height:36px;
   z-index:9; background:none; border:none;
   box-sizing:border-box;
@@ -156,7 +156,7 @@ line-height:40px; color:#52cfc8; border:1px solid #52cfc8; background:rgba(255,2
 }
 .wrap-input input:focus-visible {outline:none; border:1px solid #ccc;}
 .wrap-input b {position:absolute; top:0; right:20px; width:100px; height:36px;line-height:34px;
- z-index:1; white-space: nowrap; text-overflow: ellipsis; overflow:hidden; }
+ z-index:1; white-space: nowrap; text-overflow: ellipsis; overflow:hidden; color:#febedd; }
 
 .img-main {width:100%; height:auto;}
 .img-main img {width:80%;}
@@ -203,7 +203,7 @@ line-height:40px; color:#52cfc8; border:1px solid #52cfc8; background:rgba(255,2
 .wrap-accountnum button {display:inline-block; padding:2px 8px; border-radius:3px;
   border:1px solid #FFCDE5;
   background:rgba(0,0,0,0);
-  color:#52cfc8; cursor: pointer;}
+  color:#52cfc8;}
 .ly-contents.type-location > p {margin:5px 0;}
 
 .wrap-btn {display:flex; width:80%; margin:20px auto;}
@@ -220,21 +220,15 @@ line-height:40px; color:#52cfc8; border:1px solid #52cfc8; background:rgba(255,2
 .list-fm li  em {display:inline-block; width:60px; text-align:right;}
 
 /* photo silder */
-.wrap-gallery {position: relative; width:100%; max-width:520px; margin:0 auto;}
+.wrap-gallery {width:100%; max-width:520px; margin:0 auto;}
 .slick-list {width:100%; max-height:780px;}
-
-.txt-gal {position:absolute;
-  width:160px;
-  top:10px;
-  margin-left:-80px; color:#5cc5c5; font-size:15px;
-z-index: 999;} 
 .list-photo .slick-arrow {position:absolute; width:30px; height:20px; bottom:5px; opacity:0; cursor: pointer;}
 .list-photo .slick-prev {right:40px;}
 .list-photo .slick-next {right:0;}
 .data-photo img {width:100%; max-width:520px; margin:0 auto; height:auto;}
 .slick-dots {margin-top:10px;}
 .slick-dots li {display:inline-block; margin:0 2px;}
-.slick-dots li button {display:inline-block; width:10px; height:4px; background-color:rgb(244, 231, 158); border:none; text-indent:-9999px;}
+.slick-dots li button {display:inline-block; width:12px; height:5px; border-radius:4px; background-color:rgb(244, 231, 158); border:none; text-indent:-9999px;}
 .slick-dots li.slick-active button {background-color:#52C8CF;}
 .arrow-g {display:flex; justify-content: flex-end; margin:-24px 10px 0 0;}
 .arrow-area {width:30px; height:20px; cursor:pointer;}
@@ -285,6 +279,26 @@ z-index: 999;}
   animation: curser 1s linear infinite;
 }
 
+@keyframes curser {
+  0% {opacity:1;}
+  50% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@keyframes fade-out {
+  0% {top:-10px;}
+  33% {top:-30px; }
+  66% {top:-50px;}
+  88% {top:-70px; opacity:0.6;}
+  100% {opacity:0; top:-90px; display:none;} 
+}
+
+@keyframes fade-out-bg {
+  0% {opacity: 1;}
+  60% {opacity: 1;}
+  88% {opacity: 0.9;}
+  100% {opacity:0;}
+}
 
 @keyframes fade-in {
   0% {opacity:0;}
